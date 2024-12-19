@@ -1,0 +1,163 @@
+:root {
+    /*root define variáveis globais*/
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+
+}
+
+body{
+    background-color: var(--cor-de-fundo); /*cor do fundo*/
+    font-family:  var(--fonte-principal);
+    color: var(--branco-principal); /*cor da fonte*/
+    font-size: 16px; /*tamanho da fonte*/
+    font-weight: 400; /* controla a expessura do texto, pode ser normal (400), bold (negrito- 700), ligher que deixa mais fino e bolder que deixa o texto mais grosso*/
+}
+
+* {
+    margin: 0; /*distancia entre o elemento e a margem/ externo*/
+    padding: 0; /*distancia entre o elemento e a borda/ dentro de um quadrado por exemplo*/
+}
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat; /*pra nao repetir a imagem*/
+    background-size: contain ;
+    align-items: center; /*alinhamneto dos itens verticalmente dentro do conteiner ou grid*/
+    text-align: center; /*alinhamento todas as coisas que estão naquele bloco(section, div, p), alinamento horizontal*/
+}
+
+.container{
+    height: 100vh;
+    /* grid vai separando os elementos da tela, seja um embaixo do outro ou um ao lado do outro*/
+    display: grid; /* o grid aqui define por linhas*/
+    grid-template-columns: 33% 33% 33%; /* aqui ele vai ocupar os espaços de colunas, se for 50% 50%, ele está dizendo pra dividir pela metade*/
+    
+    
+}
+
+.container__botao{
+    background-color:var(--botao-azul) ;
+    border-radius: 5px; /*usada pra arredondar os cantos das bordas quadradas*/
+    padding: 1rem; /*distancia entre o elemento e a borda*/
+    color: var(--branco-pricipal);
+    display: block; /*determina como o conteúdo dentro de um elemento será organizado e como o próprio elemento interage com outros elementos, nesse caso ele ocupa toda a largura disponivel, começa em uma nova linha e tem uma largura e altura definidas*/
+    text-decoration: none; /* é usado para definidir se o texto terá algo, seja itálico, sublinhado, etc*/
+    margin-bottom: 1em ; /*usado para definir a distancia da margem de baixo do elemento*/
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    text-decoration: none;
+
+}
+
+.container__aviso{
+    font-size: 12px ;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*está definindo o espaçamento externo (margem) de um elemento. Ela define os valores das margens superior, direita, inferior e esquerda*/
+}
+
+.container__caixa{
+    margin: 0 6em; /* a construção da margem com dois valores quer dizer que o "0" é em cima e em baixo e o "6em" é direita e esquerda*/
+}
+
+.secundario__imagem{
+    width: 80%; /*aqui tá dizendo que ele via ocupar 80% da página*/
+}
+
+.secundario{/* usando o segundario aq porque se pegar o "container" pode mudar a estrutura toda do css*/
+    align-items: center;
+    margin: 0 10em;
+}
+
+
+.descricao__titulo{
+    font-size: 48px;
+    font-weight: 700;
+    color: var;
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario)
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos__lista{
+    display: flex; /*faz todos os itens ficarem um do lado do outro em uma linha*/
+    justify-content: center; /*usado para organizar o espaço entre os itens em um container (como uma caixa que tem vários objetos)*/
+    list-style-type: none; /*usado pra definir algum negrito, ponto, etc que tenha na lista*/
+    margin: 5em 0;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    color: var(--branco-principal);
+    text-decoration: none;
+    margin-left: 1em; /*cria o espaçamento entre os itens da lista, um do lado do outro*/
+}
+
+.rodape__texto{
+    margin: 1em 0;
+    font-size: 14px;
+    color: var(--cinza-secundario)
+}
+
+.lista__link a:hover{/*o "a" se refere ao link, o hover se refere ao momento que o mouse passa sobre o elemento*/ 
+    color: var(--botao-azul)
+}
+
+.lista__link a:active{/*quando tiver clicando no elemento ele vai mudar de cor*/
+    color:brown;
+}
+
+.container__botao:hover{/*trata-se de uma pseudo classe em que consegue detectar a nossa interaçao com a tela*/
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
