@@ -5,7 +5,7 @@
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
     --fonte-principal: 'Inter';
-    --botao-azul-efeito: #9b6bf5;
+    --botao-azul-efeito: #3c92fa;
 
 }
 
@@ -160,4 +160,30 @@ body{
 .container__botao:hover{/*trata-se de uma pseudo classe em que consegue detectar a nossa interaçao com a tela*/
     background-color: var(--botao-azul-efeito);
     color: var(--cor-de-fundo);
+}
+
+@media screen and (max-width: 768px) {/*condiçoes em css, ou seja, só vai acontecer quando isso for verdade, nesse caso, quando ele tiver em modo mobile*/
+    .container{
+        display: block;/*cada um dos elementos vao ficar com um bloquinho em cima do outro*/
+        background-image: none;
+    }
+    .container__imagem{
+        width: 50vw;/*ocupa 50% do tamanho da pagina*/
+    }
+    .container__caixa{
+        margin: 2em 2em
+    }
+    .secundario{
+        margin: 0;
+        text-align: center;
+    }
+    .secundario__imagem{
+        width: 50vw;
+    }
+    .dispositivos__lista{
+        display: block;
+    }
+    .rodape__lista{
+        display: block;
+    }
 }
